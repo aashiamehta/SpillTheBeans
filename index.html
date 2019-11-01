@@ -430,12 +430,10 @@
                            var kilos = document.getElementById("kilos").checked;
                            if (pounds) {
                             document.getElementById("water_result").innerHTML = "The ideal amount of water you should drink is " + nameValue/2 + "-" + nameValue + " oz.";
-                           } else {
+                           }
+                           if (kilos) {
                             document.getElementById("water_result").innerHTML = "The ideal amount of water you should drink is " + (nameValue/2)*2.20462 + "-" + nameValue*2.20462 + " oz.";
                            }
-
-                           console.log(pounds);
-                           console.log(kilos);
                         }
                     </script>
                   </form>
