@@ -33,10 +33,10 @@
       <div class="collapse navbar-collapse" id="navbarResponsive">
         <ul class="navbar-nav ml-auto">
           <li class="nav-item mx-0 mx-lg-1">
-            <a class="nav-link py-3 px-0 px-lg-3 rounded js-scroll-trigger" href="#about">About</a>
+            <a class="nav-link py-3 px-0 px-lg-3 rounded js-scroll-trigger" href="#calculator">Calculator</a>
           </li>
           <li class="nav-item mx-0 mx-lg-1">
-            <a class="nav-link py-3 px-0 px-lg-3 rounded js-scroll-trigger" href="#calculator">Calculator</a>
+            <a class="nav-link py-3 px-0 px-lg-3 rounded js-scroll-trigger" href="#about">About</a>
           </li>
           <li class="nav-item mx-0 mx-lg-1">
             <a class="nav-link py-3 px-0 px-lg-3 rounded js-scroll-trigger" href="#contact">Contact</a>
@@ -401,43 +401,27 @@
                   <!-- Portfolio Modal - Text -->
                   <div class="col-lg-8 mx-auto">
                     <form name="Hydration" id="HydrationForm" novalidate="novalidate">
-                      <div class="switch">
-                        <input id="pounds" name="weighttype" type="radio" checked>
-                        <label for="pounds" onclick="">Pounds</label>
-                        <input id="kilos" name="weighttype" type="radio"> 
-                        <label for="kilos" onclick="">Kilos</label>
-                        <span class="slide-button"></span>
+                      <div class="control-group">
+                        <div class="form-group floating-label-form-group controls mb-0 pb-2">
+                          <label>Weight</label>
+                          <input class="form-control" id="weight1" type="number" placeholder="Weight" required="required" data-validation-required-message="Please enter your weight.">
+                          <p class="help-block text-danger"></p>
+                        </div>
                       </div>
-                      <div style="clear:both;"></div>
-                    </div>
-                    <div class="control-group">
-                      <div class="form-group floating-label-form-group controls mb-0 pb-2">
-                        <label>Weight</label>
-                        <input class="form-control" id="weight1" type="number" placeholder="Weight" required="required" data-validation-required-message="Please enter your weight.">
-                        <p class="help-block text-danger"></p>
+                      <br>
+                      <p id="water_result"></p>
+                      <div id="success"></div>
+                      <div class="form-group">
+                        <input type="button" onclick="calculateWaterIntake()" value="Calculate Ideal Hydration">
                       </div>
-                    </div>
-                    <br>
-                    <p id="water_result"></p>
-                    <div id="success"></div>
-                    <div class="form-group">
-                      <input type="button" onclick="calculateWaterIntake()" value="Calculate Ideal Hydration">
-                    </div>
-                    <script>
+                      <script>
                         function calculateWaterIntake() {
-                           var nameValue = document.getElementById("weight1").value;
-                           var pounds = document.getElementById("pounds").checked;
-                           var kilos = document.getElementById("kilos").checked;
-                           if (pounds) {
-                            document.getElementById("water_result").innerHTML = "The ideal amount of water you should drink is " + nameValue/2 + "-" + nameValue + " oz.";
-                           }
-                           if (kilos) {
-                            document.getElementById("water_result").innerHTML = "The ideal amount of water you should drink is " + (nameValue/2)*2.20462 + "-" + nameValue*2.20462 + " oz.";
-                           }
-                        }
-                    </script>
-                  </form>
-                  <button class="btn btn-primary" href="#" data-dismiss="modal">
+                         var nameValue = document.getElementById("weight1").value;
+                         document.getElementById("water_result").innerHTML = "The ideal amount of water you should drink is " + nameValue / 8 + " - " + nameValue / 4 + " cups.";
+                       }
+                     </script>
+                   </form>
+                   <button class="btn btn-primary" href="#" data-dismiss="modal">
                     <i class="fas fa-times fa-fw"></i>
                     Close Window
                   </button>
