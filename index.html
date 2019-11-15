@@ -457,20 +457,37 @@
                       <div class="control-group">
                         <div class="form-group floating-label-form-group controls mb-0 pb-2">
                           <label>Mg drank</label>
-                          <input class="form-control" id="mg" type="number" placeholder="Mg" required="required" data-validation-required-message="Please enter the approximate mg you drank.">
+                          <input class="form-control" id="mg1" type="number" placeholder="Mg" required="required" data-validation-required-message="Please enter the approximate mg you drank.">
                           <p class="help-block text-danger"></p>
                         </div>
                         <div class="form-group floating-label-form-group controls mb-0 pb-2">
                           <label>Time Drank</label>
-                          <input class="form-control" id="time" type="time" required="required" data-validation-required-message="Please enter when you drank the coffee.">
+                          <input class="form-control" id="time1" type="time" required="required" data-validation-required-message="Please enter when you drank the coffee.">
                           <p class="help-block text-danger"></p>
                         </div>
                       </div>
                       <br>
+                      <p id="half_life"></p>
                       <div id="success"></div>
                       <div class="form-group">
-                        <button type="submit" class="btn btn-primary btn-l" id="sendMessageButton">Calculate Half Life</button>
+                        <input type="button" onclick="calculateHalfLife()" value="Calculate How Much Caffeine You Have left">
                       </div>
+                        <script>
+                          function calculateHalfLife() {
+                           var mgVal = document.getElementById("mg1").value;
+                           var timeVal = document.getElementById("time1").value;
+                           var d = new Date();
+                           var timeSelect = timeVal.split(':');
+                           var inputHour = timeSelect[0]
+                           var inputMinute = timeSelect[1];
+                           var currHour = d.getHours();
+                           var currMin = d.getMinutes();
+                           var diffHours = currHour - inputHour + ((currMin - inputMinute) / 60);
+                           document.getElementById("half_life").innerHTML = "You have  " + mgVal * (Math.pow(0.89, diffHours)) + " mg of caffeine left in your body";
+                           console.log(Math.pow(0.89, diffHours));
+                           console.log(mgVal);
+                         }
+                       </script>
                     </form>
                     <button class="btn btn-primary" href="#" data-dismiss="modal">
                       <i class="fas fa-times fa-fw"></i>
