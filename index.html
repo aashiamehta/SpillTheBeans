@@ -346,10 +346,19 @@
                           </div>
                         </div>
                         <br>
+                        <p id="intake_result"></p>
                         <div id="success"></div>
                         <div class="form-group">
-                          <button type="submit" class="btn btn-primary btn-l" id="sendMessageButton">Calculate Safe Limit</button>
+                          <input type="button" onclick="calculateSafeLimit()" value="Calculate Safe Limit">
                         </div>
+                        <script>
+                          function calculateSafeLimit() {
+                           var nameValue = document.getElementById("weight").value;
+                           var mg = nameValue * 0.4535 * 6;
+                           var rounded = mg.toFixed(2);
+                           document.getElementById("intake_result").innerHTML = "Your safe caffeine limit for intake is " + rounded + " mg.";
+                         }
+                       </script>
                       </form>
                       <button class="btn btn-primary" href="#" data-dismiss="modal">
                         <i class="fas fa-times fa-fw"></i>
