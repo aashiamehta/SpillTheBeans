@@ -491,10 +491,10 @@
                            var inputMinute = timeSelect[1];
                            var currHour = d.getHours();
                            var currMin = d.getMinutes();
-                           var diffHours = currHour - inputHour + ((currMin - inputMinute) / 60);
+                           var diffHours = inputHour - currHour + ((currMin - inputMinute) / 60);
                            document.getElementById("half_life").innerHTML = "You have  " + mgVal * (Math.pow(0.89, diffHours)) + " mg of caffeine left in your body";
                            console.log(Math.pow(0.89, diffHours));
-                           console.log(mgVal);
+                           console.log(diffHours);
                          }
                        </script>
                     </form>
