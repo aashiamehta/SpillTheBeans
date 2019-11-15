@@ -7,6 +7,7 @@
   <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
   <meta name="description" content="">
   <meta name="author" content="">
+  <link rel="icon" href="data:,">
 
   <title>Spill the Beans</title>
 
@@ -51,6 +52,8 @@
     <div class="container d-flex align-items-center flex-column">
 
       <!-- PUT LOGO THINGY HERE -->
+
+      <img class="masthead-avatar mb-5" src="img/logo-4.png" alt="">
 
 
       <!-- Masthead Heading -->
@@ -359,67 +362,6 @@
                            document.getElementById("intake_result").innerHTML = "Your safe caffeine limit for intake is " + rounded + " mg.";
                          }
                        </script>
-                      </form>
-                      <button class="btn btn-primary" href="#" data-dismiss="modal">
-                        <i class="fas fa-times fa-fw"></i>
-                        Close Window
-                      </button>
-                    </div>
-                  </div>
-                </div>
-              </div>
-            </div>
-          </div>
-        </div>
-      </div>
-      <!-- Portfolio Modal 2 -->
-      <div class="portfolio-modal modal fade" id="portfolioModal2" tabindex="-1" role="dialog" aria-labelledby="portfolioModal2Label" aria-hidden="true">
-        <div class="modal-dialog modal-xl" role="document">
-          <div class="modal-content">
-            <button type="button" class="close" data-dismiss="modal" aria-label="Close">
-              <span aria-hidden="true">
-                <i class="fas fa-times"></i>
-              </span>
-            </button>
-            <div class="modal-body text-center">
-              <div class="container">
-                <div class="row justify-content-center">
-                  <div class="col-lg-8">
-                    <!-- Portfolio Modal - Title -->
-                    <h2 class="portfolio-modal-title text-secondary text-uppercase mb-0">Hydration Calculator</h2>
-                    <!-- Icon Divider -->
-                    <div class="divider-custom">
-                      <div class="divider-custom-line"></div>
-                      <div class="divider-custom-icon">
-                        <i class="fas fa-coffee"></i>
-                      </div>
-                      <div class="divider-custom-line"></div>
-                    </div>
-                    <!-- Portfolio Modal - Image -->
-                    <img class="img-fluid rounded mb-5" src="img/portfolio/submarine.png" alt="">
-                    <p class="mb-5 font-weight-light mb-0">Tell us about yourself and we will help determine the ideal amount of water you should drink!</p>
-                    <!-- Portfolio Modal - Text -->
-                    <div class="col-lg-8 mx-auto">
-                      <form name="Hydration" id="HydrationForm" novalidate="novalidate">
-                        <div class="control-group">
-                          <div class="form-group floating-label-form-group controls mb-0 pb-2">
-                            <label>Weight</label>
-                            <input class="form-control" id="weight1" type="number" placeholder="Pounds" required="required" data-validation-required-message="Please enter your weight.">
-                            <p class="help-block text-danger"></p>
-                          </div>
-                        </div>
-                        <br>
-                        <p id="water_result"></p>
-                        <div id="success"></div>
-                        <div class="form-group">
-                          <input type="button" onclick="calculateWaterIntake()" value="Calculate Ideal Hydration">
-                        </div>
-                        <script>
-                          function calculateWaterIntake() {
-                           var nameValue = document.getElementById("weight1").value;
-                           document.getElementById("water_result").innerHTML = "The ideal amount of water you should drink is " + nameValue / 8 + " - " + nameValue / 4 + " cups.";
-                         }
-                       </script>
                      </form>
                      <button class="btn btn-primary" href="#" data-dismiss="modal">
                       <i class="fas fa-times fa-fw"></i>
@@ -433,223 +375,267 @@
         </div>
       </div>
     </div>
+    <!-- Portfolio Modal 2 -->
+    <div class="portfolio-modal modal fade" id="portfolioModal2" tabindex="-1" role="dialog" aria-labelledby="portfolioModal2Label" aria-hidden="true">
+      <div class="modal-dialog modal-xl" role="document">
+        <div class="modal-content">
+          <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+            <span aria-hidden="true">
+              <i class="fas fa-times"></i>
+            </span>
+          </button>
+          <div class="modal-body text-center">
+            <div class="container">
+              <div class="row justify-content-center">
+                <div class="col-lg-8">
+                  <!-- Portfolio Modal - Title -->
+                  <h2 class="portfolio-modal-title text-secondary text-uppercase mb-0">Hydration Calculator</h2>
+                  <!-- Icon Divider -->
+                  <div class="divider-custom">
+                    <div class="divider-custom-line"></div>
+                    <div class="divider-custom-icon">
+                      <i class="fas fa-coffee"></i>
+                    </div>
+                    <div class="divider-custom-line"></div>
+                  </div>
+                  <!-- Portfolio Modal - Image -->
+                  <img class="img-fluid rounded mb-5" src="img/portfolio/submarine.png" alt="">
+                  <p class="mb-5 font-weight-light mb-0">Tell us about yourself and we will help determine the ideal amount of water you should drink!</p>
+                  <!-- Portfolio Modal - Text -->
+                  <div class="col-lg-8 mx-auto">
+                    <form name="Hydration" id="HydrationForm" novalidate="novalidate">
+                      <div class="control-group">
+                        <div class="form-group floating-label-form-group controls mb-0 pb-2">
+                          <label>Weight</label>
+                          <input class="form-control" id="weight1" type="number" placeholder="Pounds" required="required" data-validation-required-message="Please enter your weight.">
+                          <p class="help-block text-danger"></p>
+                        </div>
+                      </div>
+                      <br>
+                      <p id="water_result"></p>
+                      <div id="success"></div>
+                      <div class="form-group">
+                        <input type="button" onclick="calculateWaterIntake()" value="Calculate Ideal Hydration">
+                      </div>
+                      <script>
+                        function calculateWaterIntake() {
+                         var nameValue = document.getElementById("weight1").value;
+                         document.getElementById("water_result").innerHTML = "The ideal amount of water you should drink is " + nameValue / 8 + " - " + nameValue / 4 + " cups.";
+                       }
+                     </script>
+                   </form>
+                   <button class="btn btn-primary" href="#" data-dismiss="modal">
+                    <i class="fas fa-times fa-fw"></i>
+                    Close Window
+                  </button>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
 
-    <!-- Portfolio Modal 3 -->
-    <div class="portfolio-modal modal fade" id="portfolioModal3" tabindex="-1" role="dialog" aria-labelledby="portfolioModal3Label" aria-hidden="true">
-      <div class="modal-dialog modal-xl" role="document">
-        <div class="modal-content">
-          <button type="button" class="close" data-dismiss="modal" aria-label="Close">
-            <span aria-hidden="true">
-              <i class="fas fa-times"></i>
-            </span>
-          </button>
-          <div class="modal-body text-center">
-            <div class="container">
-              <div class="row justify-content-center">
-                <div class="col-lg-8">
-                  <!-- Portfolio Modal - Title -->
-                  <h2 class="portfolio-modal-title text-secondary text-uppercase mb-0">Half Life Calculator</h2>
-                  <!-- Icon Divider -->
-                  <div class="divider-custom">
-                    <div class="divider-custom-line"></div>
-                    <div class="divider-custom-icon">
-                      <i class="fas fa-coffee"></i>
-                    </div>
-                    <div class="divider-custom-line"></div>
+  <!-- Portfolio Modal 3 -->
+  <div class="portfolio-modal modal fade" id="portfolioModal3" tabindex="-1" role="dialog" aria-labelledby="portfolioModal3Label" aria-hidden="true">
+    <div class="modal-dialog modal-xl" role="document">
+      <div class="modal-content">
+        <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+          <span aria-hidden="true">
+            <i class="fas fa-times"></i>
+          </span>
+        </button>
+        <div class="modal-body text-center">
+          <div class="container">
+            <div class="row justify-content-center">
+              <div class="col-lg-8">
+                <!-- Portfolio Modal - Title -->
+                <h2 class="portfolio-modal-title text-secondary text-uppercase mb-0">Half Life Calculator</h2>
+                <!-- Icon Divider -->
+                <div class="divider-custom">
+                  <div class="divider-custom-line"></div>
+                  <div class="divider-custom-icon">
+                    <i class="fas fa-coffee"></i>
                   </div>
-                  <!-- Portfolio Modal - Image -->
-                  <img class="img-fluid rounded mb-5" src="img/portfolio/game.png" alt="">
-                  <p class="mb-5 font-weight-light mb-0">How much caffeine do I have left in my body? We'll help you calculate what's left!</p>
-                  <!-- Portfolio Modal - Text -->
-                  <div class="col-lg-8 mx-auto">
-                    <form name="HalfLife" id="HalfLifeForm" novalidate="novalidate">
-                      <div class="control-group">
-                        <div class="form-group floating-label-form-group controls mb-0 pb-2">
-                          <label>Mg drank</label>
-                          <input class="form-control" id="mg1" type="number" placeholder="Mg" required="required" data-validation-required-message="Please enter the approximate mg you drank.">
-                          <p class="help-block text-danger"></p>
-                        </div>
-                        <div class="form-group floating-label-form-group controls mb-0 pb-2">
-                          <label>Time Drank</label>
-                          <input class="form-control" id="time1" type="time" required="required" data-validation-required-message="Please enter when you drank the coffee.">
-                          <p class="help-block text-danger"></p>
-                        </div>
-                      </div>
-                      <br>
-                      <p id="half_life"></p>
-                      <div id="success"></div>
-                      <div class="form-group">
-                        <input type="button" onclick="calculateHalfLife()" value="Calculate How Much Caffeine You Have left">
-                      </div>
-                        <script>
-                          function calculateHalfLife() {
-                           var mgVal = document.getElementById("mg1").value;
-                           var timeVal = document.getElementById("time1").value;
-                           var d = new Date();
-                           var timeSelect = timeVal.split(':');
-                           var inputHour = timeSelect[0]
-                           var inputMinute = timeSelect[1];
-                           var currHour = d.getHours();
-                           var currMin = d.getMinutes();
-                           var diffHours = inputHour - currHour + ((currMin - inputMinute) / 60);
-                           document.getElementById("half_life").innerHTML = "You have  " + mgVal * (Math.pow(0.89, diffHours)) + " mg of caffeine left in your body";
-                           console.log(Math.pow(0.89, diffHours));
-                           console.log(diffHours);
-                         }
-                       </script>
-                    </form>
-                    <button class="btn btn-primary" href="#" data-dismiss="modal">
-                      <i class="fas fa-times fa-fw"></i>
-                      Close Window
-                    </button>
-                  </div>
+                  <div class="divider-custom-line"></div>
                 </div>
+                <!-- Portfolio Modal - Image -->
+                <img class="img-fluid rounded mb-5" src="img/portfolio/game.png" alt="">
+                <p class="mb-5 font-weight-light mb-0">How much caffeine do I have left in my body? We'll help you calculate what's left!</p>
+                <!-- Portfolio Modal - Text -->
+                <div class="col-lg-8 mx-auto">
+                  <form name="HalfLife" id="HalfLifeForm" novalidate="novalidate">
+                    <div class="control-group">
+                      <div class="form-group floating-label-form-group controls mb-0 pb-2">
+                        <label>Mg drank</label>
+                        <input class="form-control" id="mg1" type="number" placeholder="Mg" required="required" data-validation-required-message="Please enter the approximate mg you drank.">
+                        <p class="help-block text-danger"></p>
+                      </div>
+                      <div class="form-group floating-label-form-group controls mb-0 pb-2">
+                        <label>Time Drank</label>
+                        <input class="form-control" id="time1" type="time" required="required" data-validation-required-message="Please enter when you drank the coffee.">
+                        <p class="help-block text-danger"></p>
+                      </div>
+                    </div>
+                    <br>
+                    <p id="half_life"></p>
+                    <div id="success"></div>
+                    <div class="form-group">
+                      <input type="button" onclick="calculateHalfLife()" value="Calculate How Much Caffeine You Have left">
+                    </div>
+                    <script>
+                      function calculateHalfLife() {
+                       var mgVal = document.getElementById("mg1").value;
+                       var timeVal = document.getElementById("time1").value;
+                       var d = new Date();
+                       var timeSelect = timeVal.split(':');
+                       var inputHour = timeSelect[0]
+                       var inputMinute = timeSelect[1];
+                       var currHour = d.getHours();
+                       var currMin = d.getMinutes();
+                       var diffHours = inputHour - currHour + ((currMin - inputMinute) / 60);
+                       document.getElementById("half_life").innerHTML = "You have  " + mgVal * (Math.pow(0.89, diffHours)) + " mg of caffeine left in your body";
+                     }
+                   </script>
+                 </form>
+                 <button class="btn btn-primary" href="#" data-dismiss="modal">
+                  <i class="fas fa-times fa-fw"></i>
+                  Close Window
+                </button>
               </div>
             </div>
           </div>
         </div>
       </div>
     </div>
-    <!-- Portfolio Modal 4 -->
-    <div class="portfolio-modal modal fade" id="portfolioModal4" tabindex="-1" role="dialog" aria-labelledby="portfolioModal4Label" aria-hidden="true">
-      <div class="modal-dialog modal-xl" role="document">
-        <div class="modal-content">
-          <button type="button" class="close" data-dismiss="modal" aria-label="Close">
-            <span aria-hidden="true">
-              <i class="fas fa-times"></i>
-            </span>
-          </button>
-          <div class="modal-body text-center">
-            <div class="container">
-              <div class="row justify-content-center">
-                <div class="col-lg-8">
-                  <!-- Portfolio Modal - Title -->
-                  <h2 class="portfolio-modal-title text-secondary text-uppercase mb-0">Should I drink this?</h2>
-                  <!-- Icon Divider -->
-                  <div class="divider-custom">
-                    <div class="divider-custom-line"></div>
-                    <div class="divider-custom-icon">
-                      <i class="fas fa-coffee"></i>
-                    </div>
-                    <div class="divider-custom-line"></div>
-                  </div>
-                  <!-- Portfolio Modal - Image -->
-                  <img class="img-fluid rounded mb-5" src="img/portfolio/circus.png" alt="">
-                  <p class="mb-5 font-weight-light mb-0">Will my drink disrupt my sleep?</p>
-                  <!-- Portfolio Modal - Text -->
-                  <div class="col-lg-8 mx-auto">
-                    <form name="DisruptSleep" id="DisruptSleepForm" novalidate="novalidate">
-                      <div class="control-group">
-                        <div class="form-group floating-label-form-group controls mb-0 pb-2">
-                          <label>Mg drank</label>
-                          <input class="form-control" id="mg" type="number" placeholder="Mg" required="required" data-validation-required-message="Please enter the approximate mg you drank.">
-                          <p class="help-block text-danger"></p>
-                        </div>
-                        <div class="form-group floating-label-form-group controls mb-0 pb-2">
-                          <label>Time Drank</label>
-                          <input class="form-control" id="time" type="time" required="required" data-validation-required-message="Please enter when you drank the coffee.">
-                          <p class="help-block text-danger"></p>
-                        </div>
-                        <div class="form-group floating-label-form-group controls mb-0 pb-2">
-                          <label>Bed Time</label>
-                          <input class="form-control" id="bedtime" type="time" required="required" data-validation-required-message="Please enter when you want to sleep by.">
-                          <p class="help-block text-danger"></p>
-                        </div>
-                      </div>
-                      <br>
-                      <div id="success"></div>
-                      <div class="form-group">
-                        <button type="submit" class="btn btn-primary btn-l" id="sendMessageButton">Calculate Sleep Disruption</button>
-                      </div>
-                    </form>
-                    <button class="btn btn-primary" href="#" data-dismiss="modal">
-                      <i class="fas fa-times fa-fw"></i>
-                      Close Window
-                    </button>
-                  </div>
+  </div>
+</div>
+<!-- Portfolio Modal 4 -->
+<div class="portfolio-modal modal fade" id="portfolioModal4" tabindex="-1" role="dialog" aria-labelledby="portfolioModal4Label" aria-hidden="true">
+  <div class="modal-dialog modal-xl" role="document">
+    <div class="modal-content">
+      <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+        <span aria-hidden="true">
+          <i class="fas fa-times"></i>
+        </span>
+      </button>
+      <div class="modal-body text-center">
+        <div class="container">
+          <div class="row justify-content-center">
+            <div class="col-lg-8">
+              <!-- Portfolio Modal - Title -->
+              <h2 class="portfolio-modal-title text-secondary text-uppercase mb-0">Should I drink this?</h2>
+              <!-- Icon Divider -->
+              <div class="divider-custom">
+                <div class="divider-custom-line"></div>
+                <div class="divider-custom-icon">
+                  <i class="fas fa-coffee"></i>
                 </div>
+                <div class="divider-custom-line"></div>
+              </div>
+              <!-- Portfolio Modal - Image -->
+              <img class="img-fluid rounded mb-5" src="img/portfolio/circus.png" alt="">
+              <p class="mb-5 font-weight-light mb-0">Will my drink disrupt my sleep?</p>
+              <!-- Portfolio Modal - Text -->
+              <div class="col-lg-8 mx-auto">
+                <form name="DisruptSleep" id="DisruptSleepForm" novalidate="novalidate">
+                  <div class="control-group">
+                    <div class="form-group floating-label-form-group controls mb-0 pb-2">
+                      <label>Mg drank</label>
+                      <input class="form-control" id="mg2" type="number" placeholder="Mg" required="required" data-validation-required-message="Please enter the approximate mg you drank.">
+                      <p class="help-block text-danger"></p>
+                    </div>
+                    <div class="form-group floating-label-form-group controls mb-0 pb-2">
+                      <label>Time Drank</label>
+                      <input class="form-control" id="time2" type="time" required="required" data-validation-required-message="Please enter when you drank the coffee.">
+                      <p class="help-block text-danger"></p>
+                    </div>
+                    <div class="form-group floating-label-form-group controls mb-0 pb-2">
+                      <label>Bed Time</label>
+                      <input class="form-control" id="bedTime" type="time" required="required" data-validation-required-message="Please enter when you want to sleep by.">
+                      <p class="help-block text-danger"></p>
+                    </div>
+                  </div>
+                  <br>
+                  <p id="sleep_time"></p>
+                  <div id="success"></div>
+                  <div class="form-group">
+                    <input type="button" onclick="calculateSleepTime()" value="Calculate Amount of Sleep Disruption">
+                  </div>
+                  <script>
+                    function calculateSleepTime() {
+                     var mgVal = document.getElementById("mg2").value;
+                     var timeVal = document.getElementById("time2").value;
+                     var bedTimeVal = document.getElementById("bedTime").value;
+                     var timeSelect = timeVal.split(':');
+                     var inputHour = timeSelect[0]
+                     var inputMinute = timeSelect[1];
+                     var bedTimeSelect = bedTimeVal.split(':');
+                     var sleepHour = bedTimeSelect[0];
+                     var sleepMin = bedTimeSelect[1];
+                     var diffHours = sleepHour - inputHour + ((sleepMin - inputMinute) / 60);
+                     var amountLeft = mgVal * Math.pow(0.89, diffHours);
+                     if (amountLeft > 200 || amountLeft == 200) {
+                        var disruption = amountLeft / 200;
+                        disruption = disruption.toFixed(2);
+                        document.getElementById("sleep_time").innerHTML = "Your sleep will probably be set back by " + disruption + " hours";
+                     }
+                     else if (amountLeft > 150 || amountLeft == 150) {
+                        document.getElementById("sleep_time").innerHTML = "Your sleep will probably be set back by 25 - 30 minutes";
+                     }
+                     else {
+                      document.getElementById("sleep_time").innerHTML = "Your probably won't notice any significant disruption in your sleep";
+                     }
+                   }
+                 </script>
+                 <button class="btn btn-primary" href="#" data-dismiss="modal">
+                  <i class="fas fa-times fa-fw"></i>
+                  Close Window
+                </button>
               </div>
             </div>
           </div>
         </div>
       </div>
     </div>
-    <!-- Portfolio Modal 5 -->
-    <div class="portfolio-modal modal fade" id="portfolioModal5" tabindex="-1" role="dialog" aria-labelledby="portfolioModal5Label" aria-hidden="true">
-      <div class="modal-dialog modal-xl" role="document">
-        <div class="modal-content">
-          <button type="button" class="close" data-dismiss="modal" aria-label="Close">
-            <span aria-hidden="true">
-              <i class="fas fa-times"></i>
-            </span>
-          </button>
-          <div class="modal-body text-center">
-            <div class="container">
-              <div class="row justify-content-center">
-                <div class="col-lg-8">
-                  <!-- Portfolio Modal - Title -->
-                  <h2 class="portfolio-modal-title text-secondary text-uppercase mb-0">Bed Time Calculator</h2>
-                  <!-- Icon Divider -->
-                  <div class="divider-custom">
-                    <div class="divider-custom-line"></div>
-                    <div class="divider-custom-icon">
-                      <i class="fas fa-coffee"></i>
-                    </div>
-                    <div class="divider-custom-line"></div>
-                  </div>
-                  <!-- Portfolio Modal - Image -->
-                  <img class="img-fluid rounded mb-5" src="img/portfolio/cake.png" alt="">
-                  <p class="mb-5 font-weight-light mb-0">When should I sleep to feel most rested? We'll help you calculate an ideal bedtime!</p>
-                  <!-- Portfolio Modal - Text -->
-                  <div class="col-lg-8 mx-auto">
-                    <form name="BedTime" id="BedTimeForm" novalidate="novalidate">
-                      <div class="control-group">
-                        <div class="form-group floating-label-form-group controls mb-0 pb-2">
-                          <label>I want to wake up at...</label>
-                          <input class="form-control" id="mg" type="time" required="required" data-validation-required-message="Please enter when you want to wake up.">
-                          <p class="help-block text-danger"></p>
-                        </div>
-                      </div>
-                      <br>
-                      <div id="success"></div>
-                      <div class="form-group">
-                        <button type="submit" class="btn btn-primary btn-l" id="sendMessageButton">Calculate Bed Time</button>
-                      </div>
-                    </form>
-                    <button class="btn btn-primary" href="#" data-dismiss="modal">
-                      <i class="fas fa-times fa-fw"></i>
-                      Close Window
-                    </button>
-                  </div>
+  </div>
+</div>
+<!-- Portfolio Modal 5 -->
+<div class="portfolio-modal modal fade" id="portfolioModal5" tabindex="-1" role="dialog" aria-labelledby="portfolioModal5Label" aria-hidden="true">
+  <div class="modal-dialog modal-xl" role="document">
+    <div class="modal-content">
+      <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+        <span aria-hidden="true">
+          <i class="fas fa-times"></i>
+        </span>
+      </button>
+      <div class="modal-body text-center">
+        <div class="container">
+          <div class="row justify-content-center">
+            <div class="col-lg-8">
+              <!-- Portfolio Modal - Title -->
+              <h2 class="portfolio-modal-title text-secondary text-uppercase mb-0">Bed Time Calculator</h2>
+              <!-- Icon Divider -->
+              <div class="divider-custom">
+                <div class="divider-custom-line"></div>
+                <div class="divider-custom-icon">
+                  <i class="fas fa-coffee"></i>
                 </div>
+                <div class="divider-custom-line"></div>
               </div>
-            </div>
-          </div>
-        </div>
-      </div>
-    </div>
-    <!-- Portfolio Modal 6 -->
-    <div class="portfolio-modal modal fade" id="portfolioModal6" tabindex="-1" role="dialog" aria-labelledby="portfolioModal6Label" aria-hidden="true">
-      <div class="modal-dialog modal-xl" role="document">
-        <div class="modal-content">
-          <button type="button" class="close" data-dismiss="modal" aria-label="Close">
-            <span aria-hidden="true">
-              <i class="fas fa-times"></i>
-            </span>
-          </button>
-          <div class="modal-body text-center">
-            <div class="container">
-              <div class="row justify-content-center">
-                <div class="col-lg-8">
-                  <!-- Portfolio Modal - Title -->
-                  <h2 class="portfolio-modal-title text-secondary text-uppercase mb-0">Calorie Counter</h2>
-                  <!-- Icon Divider -->
-                  <div class="divider-custom">
-                    <div class="divider-custom-line"></div>
-                    <div class="divider-custom-icon">
-                      <i class="fas fa-coffee"></i>
+              <!-- Portfolio Modal - Image -->
+              <img class="img-fluid rounded mb-5" src="img/portfolio/cake.png" alt="">
+              <p class="mb-5 font-weight-light mb-0">When should I sleep to feel most rested? We'll help you calculate an ideal bedtime!</p>
+              <!-- Portfolio Modal - Text -->
+              <div class="col-lg-8 mx-auto">
+                <form name="BedTime" id="BedTimeForm" novalidate="novalidate">
+                  <div class="control-group">
+                    <div class="form-group floating-label-form-group controls mb-0 pb-2">
+                      <label>I want to wake up at...</label>
+                      <input class="form-control" id="BedTime" type="time" required="required" data-validation-required-message="Please enter when you want to wake up.">
+                      <p class="help-block text-danger"></p>
                     </div>
-                    <div class="divider-custom-line"></div>
                   </div>
                   <!-- Portfolio Modal - Image -->
                   <img class="img-fluid rounded mb-5" src="img/portfolio/safe.png" alt="">
@@ -685,30 +671,97 @@
                     </button>
                  </form>
                   </div>
-                </div>
+                  <script>
+                    function calculateBedTime() {
+                     var timeVal = document.getElementById("BedTime").value;
+                     var timeSelect = timeVal.split(':');
+                     var inputHour = timeSelect[0]
+                     var inputMinute = timeSelect[1];
+                     var first = inputHour -
+                     document.getElementById("sleep_time").innerHTML = "Your probably won't notice any significant disruption in your sleep";
+
+                   }
+                 </script>
+                <button class="btn btn-primary" href="#" data-dismiss="modal">
+                  <i class="fas fa-times fa-fw"></i>
+                  Close Window
+                </button>
               </div>
             </div>
           </div>
         </div>
       </div>
+    </div>
+  </div>
+</div>
+<!-- Portfolio Modal 6 -->
+<div class="portfolio-modal modal fade" id="portfolioModal6" tabindex="-1" role="dialog" aria-labelledby="portfolioModal6Label" aria-hidden="true">
+  <div class="modal-dialog modal-xl" role="document">
+    <div class="modal-content">
+      <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+        <span aria-hidden="true">
+          <i class="fas fa-times"></i>
+        </span>
+      </button>
+      <div class="modal-body text-center">
+        <div class="container">
+          <div class="row justify-content-center">
+            <div class="col-lg-8">
+              <!-- Portfolio Modal - Title -->
+              <h2 class="portfolio-modal-title text-secondary text-uppercase mb-0">Calorie Counter</h2>
+              <!-- Icon Divider -->
+              <div class="divider-custom">
+                <div class="divider-custom-line"></div>
+                <div class="divider-custom-icon">
+                  <i class="fas fa-coffee"></i>
+                </div>
+                <div class="divider-custom-line"></div>
+              </div>
+              <!-- Portfolio Modal - Image -->
+              <img class="img-fluid rounded mb-5" src="img/portfolio/safe.png" alt="">
+              <!-- Portfolio Modal - Text -->
+              <p class="mb-5">How many calories am I consuming? We'll help you convert your caffeine into calories!</p>
+              <div class="col-lg-8 mx-auto">
+                <form name="Calorie" id="CalorieForm" novalidate="novalidate">
+                  <div class="control-group">
+                    <div class="form-group floating-label-form-group controls mb-0 pb-2">
+                      <label>Mg</label>
+                      <input class="form-control" id="mg" type="number" placeholder="Mg" required="required" data-validation-required-message="Please enter how many mg you've consumed.">
+                      <p class="help-block text-danger"></p>
+                    </div>
+                  </div>
+                  <br>
+                  <div id="success"></div>
+                  <div class="form-group">
+                    <button type="submit" class="btn btn-primary btn-l" id="sendMessageButton">Calculate Calories</button>
+                  </div>
+                </form>
+                <button class="btn btn-primary" href="#" data-dismiss="modal">
+                  <i class="fas fa-times fa-fw"></i>
+                  Close Window
+                </button>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
 
-      <!-- Bootstrap core JavaScript -->
-      <script src="vendor/jquery/jquery.min.js"></script>
-      <script src="vendor/bootstrap/js/bootstrap.bundle.min.js"></script>
+  <!-- Bootstrap core JavaScript -->
+  <script src="vendor/jquery/jquery.min.js"></script>
+  <script src="vendor/bootstrap/js/bootstrap.bundle.min.js"></script>
 
-      <!-- Plugin JavaScript -->
-      <script src="vendor/jquery-easing/jquery.easing.min.js"></script>
+  <!-- Plugin JavaScript -->
+  <script src="vendor/jquery-easing/jquery.easing.min.js"></script>
 
-      <!-- Contact Form JavaScript -->
-      <script src="js/jqBootstrapValidation.js"></script>
-      <script src="js/contact_me.js"></script>
+  <!-- Contact Form JavaScript -->
+  <script src="js/jqBootstrapValidation.js"></script>
+  <script src="js/contact_me.js"></script>
 
-      <!-- Calculator JavaScript -->
-      <script src="js/calculator.js"></script>
+  <!-- Custom scripts for this template -->
+  <script src="js/freelancer.min.js"></script>
 
-      <!-- Custom scripts for this template -->
-      <script src="js/freelancer.min.js"></script>
+</body>
 
-    </body>
-
-    </html>
+</html>
