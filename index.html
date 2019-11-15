@@ -660,20 +660,30 @@
                       <div class="control-group">
                         <div class="form-group floating-label-form-group controls mb-0 pb-2">
                           <label>Mg</label>
-                          <input class="form-control" id="mg" type="number" placeholder="Mg" required="required" data-validation-required-message="Please enter how many mg you've consumed.">
+                          <input class="form-control" id="mg3" type="number" placeholder="Mg" required="required" data-validation-required-message="Please enter how many mg you've consumed.">
                           <p class="help-block text-danger"></p>
                         </div>
                       </div>
                       <br>
+                      <p id="calorie_result"></p>
                       <div id="success"></div>
                       <div class="form-group">
-                        <button type="submit" class="btn btn-primary btn-l" id="sendMessageButton">Calculate Calories</button>
+                        <input type="button" onclick="calculateCalories()" value="Calculate Calories">
                       </div>
-                    </form>
+                      <script>
+                        function calculateCalories() {
+                         var nameValue = document.getElementById("mg3").value;
+                         var calories = nameValue * 0.007716;
+                         var rounded = calories.toFixed(3);
+                         document.getElementById("calorie_result").innerHTML = "You are consuming " + rounded + " calories.";
+                       }
+                     </script>
+                   </form>
                     <button class="btn btn-primary" href="#" data-dismiss="modal">
                       <i class="fas fa-times fa-fw"></i>
                       Close Window
                     </button>
+                 </form>
                   </div>
                 </div>
               </div>
