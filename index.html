@@ -492,7 +492,9 @@
                        var currHour = d.getHours();
                        var currMin = d.getMinutes();
                        var diffHours = currHour - inputHour + ((currMin - inputMinute) / 60);
-                       document.getElementById("half_life").innerHTML = "You have  " + mgVal * (Math.pow(0.89, diffHours)) + " mg of caffeine left in your body";
+                       var roundedd = mgVal * (Math.pow(0.89, diffHours));
+                       roundedd = roundedd.toFixed(3);
+                       document.getElementById("half_life").innerHTML = "You have  " + roundedd + " mg of caffeine left in your body";
                      }
                    </script>
                  </form>
@@ -663,6 +665,9 @@
                       --secondHour;
                       secondMin = 60 + secondMin;
                      }
+                    if (secondMin < 10 || secondMin == 0) {
+                        secondMin = "0" + secondMin;
+                    }
                      if (secondHour < 0) {
                       secondHour = 12 + secondHour;
                      }
@@ -670,7 +675,7 @@
                       sAMPM = "AM";
                      }
                      if (last < 0) {
-                      last = 12 - last;
+                      last = 12 + last;
                      }
                      else {
                       lAMPM = "AM";
