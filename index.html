@@ -656,7 +656,14 @@
                      var bedTimeSelect = bedTimeVal.split(':');
                      var sleepHour = bedTimeSelect[0];
                      var sleepMin = bedTimeSelect[1];
+                     if (sleepHour < inputHour) {
+                       var int = parseInt(sleepHour,10);
+                       int += 24;
+                       sleepHour = int;
+                     }
                      var diffHours = sleepHour - inputHour + ((sleepMin - inputMinute) / 60);
+                     console.log (sleepHour);
+                     console.log(inputHour);
                      var amountLeft = mgVal * Math.pow(0.89, diffHours);
                      if (amountLeft > 200 || amountLeft == 200) {
                         var disruption = amountLeft / 200;
@@ -667,7 +674,7 @@
                         document.getElementById("sleep_time").innerHTML = "Your sleep will probably be set back by 25 - 30 minutes";
                      }
                      else {
-                      document.getElementById("sleep_time").innerHTML = "Your probably won't notice any significant disruption in your sleep";
+                      document.getElementById("sleep_time").innerHTML = "You probably won't notice any significant disruption in your sleep";
                      }
                    }
                  </script>
